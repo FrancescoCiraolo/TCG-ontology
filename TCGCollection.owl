@@ -1367,6 +1367,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardAlteredArtwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardAlteredArtwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition">
@@ -1384,6 +1393,15 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardSignature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardSignature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
     </owl:Class>
     
 
@@ -1553,6 +1571,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#BendPhysicalVariation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#BendPhysicalVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CloudingPhysicalVariation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CloudingPhysicalVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist">
@@ -1643,7 +1677,8 @@
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardSignature"/>
+        <prov:wasAttributedTo rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist"/>
     </owl:NamedIndividual>
     
 
@@ -1661,6 +1696,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition">
         <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#FadedPhysicalVariation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#FadedPhysicalVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
     
 
@@ -1765,6 +1808,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ScratchPhysicalVariation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ScratchPhysicalVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#TearPhysicalVariation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#TearPhysicalVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
@@ -1774,6 +1833,14 @@
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#WaterDamagePhysicalVariation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#WaterDamagePhysicalVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
