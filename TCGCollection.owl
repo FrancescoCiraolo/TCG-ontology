@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#"
-     xml:base="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection"
+<rdf:RDF xmlns="http://www.semanticweb.org/ACFC/TCGCollection#"
+     xml:base="http://www.semanticweb.org/ACFC/TCGCollection"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -11,13 +11,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:TCGCollection="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ACFC/TCGCollection">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonio Casoli</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francesco Ciraolo</dc:creator>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology designed for collectionists in the Trading Card Games domain</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCGCollection Ontology</dc:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tcgc</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.semanticweb.org/ACFC/TCGCollection#</vann:preferredNamespaceUri>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TradingCardGamesCollectionOntology</rdfs:label>
     </owl:Ontology>
     
@@ -103,391 +103,392 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#artworkOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#artworkOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#artworkOf">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printArtwork"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#artworkOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printArtwork"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#availability -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#availability -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#availability">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Availability"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#availability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Availability"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#betterConditionThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#betterConditionThan">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worseConditionThan"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardCondition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardCondition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#betterPhysicalCardConditionThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#betterPhysicalCardConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#betterPhysicalCardConditionThan">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worsePhysicalCardConditionThan"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardCondition"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterPhysicalCardConditionThan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#condition"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#betterConditionThan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardPrintVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardPrintVariation">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardPrintVariationOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrintVariation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardPrintVariationOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardPrintVariationOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#condition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#condition -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#condition">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatus"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#conditionOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#conditionOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardCondition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#conditionOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#conditionOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#conditionOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatusOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#conditionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#create -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#create -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#create">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#createdBy"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#create">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#createdBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#createdBy -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#createdBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#createdBy">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#createdBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artwork"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artist"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artist"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#exemplar -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#exemplar -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#exemplar">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#exemplarOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#exemplar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#exemplarOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#exemplarOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#exemplarOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#exemplarOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#exemplarOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasArtwork -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasArtwork -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasArtwork">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isArtworkOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artwork"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasArtwork">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printArtwork"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printArtwork"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasCardPrintVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasCardPrintVariation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasCardPrintVariation">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isCardPrintVariationOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrintVariation"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasCardPrintVariation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isCardPrintVariationOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardPrintVariation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasExemplar -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasExemplar -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasExemplar">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isExemplarOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasExemplar">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isExemplarOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#exemplar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#exemplar"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasMember -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasMember -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasMember">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasMember">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasRarity -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasRarity -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#hasRarity">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isRarityOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasRarity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isArtworkOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isArtworkOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isCardPrintVariationOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isCardPrintVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isCardPrintVariationOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isCardPrintVariationOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isExemplarOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isExemplarOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isExemplarOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isExemplarOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isRarityOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isRarityOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#lessRareThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#lessRareThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#lessRareThan">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarerThan"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#lessRareThan">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#rarerThan"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#mechanism -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#mechanism -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#mechanism">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#mechanismOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#mechanism">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#mechanismOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#mechanismOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#mechanismOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#mechanismOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#mechanismOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatus -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatus">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatusOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardStatus"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatusOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatusOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardVariation">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatus"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardVariationOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalVariation"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariationOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardVariationOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardVariationOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatusOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#priced -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#priced">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PriceRange"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PriceRange"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#print -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printArtwork -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printArtwork -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printArtwork">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printArtwork">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artwork"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printLessRareThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printLessRareThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printLessRareThan">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printRarerThan"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printLessRareThan">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printRarerThan"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printRarerThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printRarerThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#printRarerThan">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printRarerThan">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarity"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isRarityOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarerThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#rarerThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarerThan">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarerThan">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarity -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#rarity -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarity">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarityOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#rarityOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarityOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#rarityOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#rarityOf"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarityOf"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worseConditionThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worseConditionThan">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worsePhysicalCardConditionThan -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#worsePhysicalCardConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worsePhysicalCardConditionThan">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#worsePhysicalCardConditionThan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#condition"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#worseConditionThan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -513,84 +514,84 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#artistName -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#artistName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#artistName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#artistName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artist"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artist"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardName -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#cardName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Product"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment>It has to be a normalized value in [0,1]; relative to the market situation</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketMinPrice -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketMinPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketMinPrice">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketPrice"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketMinPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketPrice"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketPrice -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketPrice">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Product"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketPrice"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketPrice"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardLocalization -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardLocalization -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardLocalization">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardLocalization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#setName -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#setName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#setName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#setName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#setReleaseDate -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#setReleaseDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#setReleaseDate">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#setReleaseDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -619,32 +620,32 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artist -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Artist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artist">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Artist">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artwork -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Artwork -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artwork">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Artwork">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Availability -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Availability -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Availability">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Availability">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighAvailability"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowAvailability"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumAvailability"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoAvailability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -652,74 +653,81 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#BadPhysicalVariaton -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#BadPhysicalVariaton">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalVariation"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#BadStateCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#BadStateCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#BadStateCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#BadStateCard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatus"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#BadPhysicalVariaton"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#worsePhysicalCardConditionThan"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Card -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardCollection -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardCollection -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardCollection">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardCollection">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardPrint -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Product"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrintVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrintVariation"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Collectionist -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Collectionist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Collectionist">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Collectionist">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GarbageCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GarbageCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GarbageCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GarbageCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HACard"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPricedCard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HACard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPricedCard"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -727,87 +735,86 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodPhysicalVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodPhysicalVariation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalVariation"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodStateCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GoodStateCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodStateCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodStateCard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#physicalCardStatus"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodPhysicalVariation"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#betterPhysicalCardConditionThan"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HACard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HACard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASCard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HASCard"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -816,24 +823,24 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighAvailability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -848,21 +855,21 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:label xml:lang="en">HighAvailabilitySingleCard</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASet -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HASet">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -877,21 +884,21 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:label xml:lang="en">HighAvailabilitySet</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HighPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -911,46 +918,46 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HighPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#KeeperCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#KeeperCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#KeeperCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#KeeperCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NACard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NACard"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPricedCard"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LACard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPricedCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LACard"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LACard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LACard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#availability"/>
-                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -960,40 +967,40 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:label xml:lang="en">LowAvailabilityCard</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1011,21 +1018,21 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:label xml:lang="en">LowAvailabilitySingleCard</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASet -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASet">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1043,21 +1050,21 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:label xml:lang="en">LowAvailabilitySet</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LowPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1077,36 +1084,36 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LowPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MACard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MACard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASet"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASet"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1115,24 +1122,24 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumAvailability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1150,21 +1157,21 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:label xml:lang="en">MediumAvailabilitySingleCard</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASet -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MASet">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1182,21 +1189,21 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:label xml:lang="en">MediumAvailabilitySet</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumHighPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumHighPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1216,24 +1223,24 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumHighPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1253,89 +1260,89 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NACard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NACard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASCard"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#isMemeberOf"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASet"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoAvailability"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:label xml:lang="en">NoAvailabilitySingleCard</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASet -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NASet">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:label xml:lang="en">NoAvailabilitySet</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NoPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1343,71 +1350,71 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NoPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardCondition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardCondition">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExcellentCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LightPlayedCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MintCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NearMintCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PlayedCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PoorCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MintCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardStatus"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardStatus -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardStatus"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalVariation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCardStatus"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PriceRange -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PriceRange -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PriceRange">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PriceRange">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumHighPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryHighPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryLowPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1415,35 +1422,50 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Product -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Product -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Product"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Rarity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Set -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Product"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryHighPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#UniqueCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryHighPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#UniqueCard">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPricedCard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1460,24 +1482,24 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryHighPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryLowPricedCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryLowPricedCard">
+    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1497,11 +1519,11 @@
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryLowPrice"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
     </owl:Class>
     
 
@@ -1531,200 +1553,227 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleArtist -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleArtist">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artist"/>
-        <create rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleArtwork"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artist"/>
+        <create rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtwork"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleArtwork -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtwork -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleArtwork">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Artwork"/>
-        <artworkOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtwork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
+        <artworkOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Card"/>
-        <print rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <print rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
         <cardName>Example</cardName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrint"/>
-        <isMemeberOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleSet"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <isMemeberOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet"/>
         <marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</marketAvailability>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleFoilVariation -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleFoilVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleFoilVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#CardPrintVariation"/>
-        <cardPrintVariationOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleFoilVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
+        <cardPrintVariationOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExamplePhysicalCard -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleNMPhysicalCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExamplePhysicalCard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PhysicalCard"/>
-        <condition rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NearMintCondition"/>
-        <exemplarOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleNMPhysicalCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <condition rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition"/>
+        <exemplarOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
         <physicalCardLocalization rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</physicalCardLocalization>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleSet -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExamplePoorPhysicalCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleSet">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Set"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExamplePoorPhysicalCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <condition rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
+        <exemplarOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</marketAvailability>
         <setName rdf:datatype="http://www.w3.org/2001/XMLSchema#language">SuperSet</setName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleSuperDuperRarity -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleSuperDuperRarity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#Rarity"/>
-        <rarityOf rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <physicalCardVariation rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExcellentCondition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExcellentCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodCondition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSuperDuperRarity -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#GoodCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LightPlayedCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSuperDuperRarity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
+        <rarityOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighAvailability -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighAvailability"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPrice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#HighPrice"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LightPlayedCondition -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LightPlayedCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PlayedCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition">
+        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowAvailability -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowAvailability"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPrice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#LowPrice"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumAvailability -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumAvailability"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumHighPrice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumHighPrice"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumPrice -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MediumPrice"/>
-    
-
-
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MintCondition -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#MintCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NearMintCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition">
+        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NearMintCondition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NearMintCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#ExcellentCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HighPrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition">
+        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoAvailability -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoPrice -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LowPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#NoPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PlayedCondition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PlayedCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PoorCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MintCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MintCondition">
+        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PoorCondition -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#PoorCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition">
+        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition"/>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryHighPrice -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryHighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryLowPrice -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NoPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#VeryLowPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition">
+        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
 </rdf:RDF>
 
 
