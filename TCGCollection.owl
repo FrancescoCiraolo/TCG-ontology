@@ -308,7 +308,7 @@
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasMember -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasMember">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
@@ -370,9 +370,9 @@ Represents the concept of a collection having a member, which in this instance i
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf -->
+    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
@@ -909,7 +909,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -918,7 +918,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -927,7 +927,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -936,7 +936,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -945,7 +945,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -954,7 +954,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -1099,7 +1099,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -1108,7 +1108,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -1242,7 +1242,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -1251,7 +1251,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
@@ -1447,7 +1447,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemeberOf"/>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1871,7 +1871,7 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint">
         <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <isMemeberOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet"/>
+        <isMemberOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet"/>
         <marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</marketAvailability>
     </owl:NamedIndividual>
     
