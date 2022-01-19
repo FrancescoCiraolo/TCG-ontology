@@ -511,7 +511,7 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printOf">
         <rdfs:comment xml:lang="en">Link between CardPrint and the Card associated. This property is an inverse property of print.</rdfs:comment>
-        <rdfs:label xml:lang="en">Prin Of</rdfs:label>
+        <rdfs:label xml:lang="en">Print Of</rdfs:label>
         <rdfs:label xml:lang="it">Stampa Di</rdfs:label>
     </owl:ObjectProperty>
     
