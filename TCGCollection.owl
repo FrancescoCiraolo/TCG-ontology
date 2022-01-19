@@ -149,8 +149,8 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan"/>
         </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Positive comparison property for physical card with physical card condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Better Physical Card Condition Than</rdfs:label>
-        <rdfs:label xml:lang="en">Positive comparison property for physical card with physical card condition.</rdfs:label>
         <rdfs:label xml:lang="it">Stato Di Conservazione di Carta Fisica Migliore Di</rdfs:label>
     </owl:ObjectProperty>
     
@@ -174,8 +174,8 @@
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf">
+        <rdfs:comment xml:lang="en">Link between a card print variation and the card prints. This property is an inverse property of cardPrintVariation.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print Variation Of</rdfs:label>
-        <rdfs:label xml:lang="en">Link between a card print variation and the card prints. This property is an inverse property of cardPrintVariation.</rdfs:label>
         <rdfs:label xml:lang="it">Variazione Associata a Card Print</rdfs:label>
     </owl:ObjectProperty>
     
@@ -200,9 +200,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#conditionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
+        <rdfs:comment xml:lang="en">Link between PhysicalCardCondition and the PhysicalCards associated . This property is an inverse property of condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Condition Of</rdfs:label>
         <rdfs:label xml:lang="it">Condizione Di</rdfs:label>
-        <rdfs:label xml:lang="it">Link between PhysicalCardCondition and the PhysicalCards associated . This property is an inverse property of condition.</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -211,7 +211,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#create">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#createdBy"/>
-        <rdfs:comment xml:lang="it">Link between Artist and Artwork. This property is an inverse property of createdBy.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Link between Artist and Artwork. This property is an inverse property of createdBy.</rdfs:comment>
         <rdfs:label xml:lang="it">Crea</rdfs:label>
         <rdfs:label xml:lang="en">Create</rdfs:label>
     </owl:ObjectProperty>
@@ -226,7 +226,7 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artist"/>
         <rdfs:comment xml:lang="en">Created By</rdfs:comment>
         <rdfs:comment xml:lang="it">Creato Da</rdfs:comment>
-        <rdfs:comment xml:lang="it">Link between Artwork and Artist. This property is an inverse property of create.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Link between Artwork and Artist. This property is an inverse property of create.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -282,7 +282,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Link between a Card and its CardPrintVariations. This property is an inverse property of isCardPrintVariationOf.</rdfs:comment>
-        <rdfs:label xml:lang="en">Ha una Variazione di Card Print</rdfs:label>
+        <rdfs:label xml:lang="it">Ha una Variazione di Card Print</rdfs:label>
         <rdfs:label xml:lang="en">Has Card Print Variation</rdfs:label>
     </owl:ObjectProperty>
     
@@ -313,7 +313,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:comment xml:lang="it">Property taken from the Collection OWL Building Block.
+        <rdfs:comment xml:lang="en">Property taken from the Collection OWL Building Block.
 Represents the concept of a collection having a member, which in this instance is a Set and a CardPrint.</rdfs:comment>
         <rdfs:label xml:lang="it">Ha Membro</rdfs:label>
         <rdfs:label xml:lang="en">Has Member</rdfs:label>
@@ -341,7 +341,7 @@ Represents the concept of a collection having a member, which in this instance i
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf">
-        <rdfs:comment xml:lang="it">Link between an Artwork and the Cards associated with it. This property is an inverse property of hasArtwork.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Link between an Artwork and the Cards associated with it. This property is an inverse property of hasArtwork.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Artwork Of</rdfs:label>
         <rdfs:label xml:lang="it">É Illustrazione Di</rdfs:label>
     </owl:ObjectProperty>
@@ -377,9 +377,9 @@ Represents the concept of a collection having a member, which in this instance i
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
-        <rdfs:comment xml:lang="en">Is Member Of</rdfs:comment>
         <rdfs:comment xml:lang="en">Property taken from the Collection OWL Building Block.
 Represents the concept of a an entity being a member of a collection, which in this instance is CardPrint and a Set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Is Member Of</rdfs:label>
         <rdfs:label xml:lang="it">É Membro Di</rdfs:label>
     </owl:ObjectProperty>
     
@@ -388,8 +388,8 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf">
-        <rdfs:comment xml:lang="en">Is Rarity Of</rdfs:comment>
         <rdfs:comment xml:lang="en">Link between a Rarity and the Cards associated with it. This property is an inverse property of hasRarity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Is Rarity Of</rdfs:label>
         <rdfs:label xml:lang="it">É Rarità Di</rdfs:label>
     </owl:ObjectProperty>
     
@@ -413,8 +413,8 @@ Represents the concept of a an entity being a member of a collection, which in t
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
+        <rdfs:comment xml:lang="en">Link between PhysicalCard and any PhysicalCardStatus. This property is an inverse property of physicalCardStatusOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Condizione di Carta Fisica</rdfs:label>
-        <rdfs:label xml:lang="it">Link between PhysicalCard and any PhysicalCardStatus. This property is an inverse property of physicalCardStatusOf.</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -461,7 +461,7 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PriceRange"/>
-        <rdfs:comment xml:lang="it">Fits CardPrint into a PriceRange.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Fits CardPrint into a PriceRange.</rdfs:comment>
         <rdfs:label xml:lang="en">Priced</rdfs:label>
         <rdfs:label xml:lang="it">Valutato</rdfs:label>
     </owl:ObjectProperty>
@@ -474,7 +474,7 @@ Represents the concept of a an entity being a member of a collection, which in t
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printOf"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:label xml:lang="en">Link between Card and the CardPrints associated. This property is an inverse property of printOf.</rdfs:label>
+        <rdfs:comment xml:lang="en">Link between Card and the CardPrints associated. This property is an inverse property of printOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Print</rdfs:label>
         <rdfs:label xml:lang="it">Stampa</rdfs:label>
     </owl:ObjectProperty>
@@ -488,8 +488,8 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
+        <rdfs:comment xml:lang="en">Link between a CardPrint and its Artworks. This property is an inverse property of artworkOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print a Ilustrazione</rdfs:label>
-        <rdfs:label xml:lang="en">Link between a CardPrint and its Artworks. This property is an inverse property of artworkOf.</rdfs:label>
         <rdfs:label xml:lang="en">Print Artwork</rdfs:label>
     </owl:ObjectProperty>
     
@@ -528,7 +528,7 @@ Represents the concept of a an entity being a member of a collection, which in t
             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="it">Positive comparison property between the rarity of CardPrints.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Positive comparison property between the rarity of CardPrints.</rdfs:comment>
         <rdfs:label xml:lang="it">Print Più Rara Di</rdfs:label>
         <rdfs:label xml:lang="en">Print Rarer Than</rdfs:label>
     </owl:ObjectProperty>
@@ -566,6 +566,8 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarityOf">
         <rdfs:comment xml:lang="en">Link between a Rarity and the CardPrints associated. This property is an inverse property of rarity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rarity Of</rdfs:label>
+        <rdfs:label xml:lang="it">Rarità Di</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -635,7 +637,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment>Card availabilty. It has to be a normalized value in [0,1] relative to the market situation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Card availabilty. It has to be a normalized value in [0,1] relative to the market situation.</rdfs:comment>
         <rdfs:label xml:lang="it">Disponibilità sul Mercato</rdfs:label>
         <rdfs:label xml:lang="en">Market Availabilty</rdfs:label>
     </owl:DatatypeProperty>
@@ -674,7 +676,7 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
         <rdfs:comment xml:lang="en">Localization used for the card.</rdfs:comment>
-        <rdfs:label xml:lang="en">Linguaggio della Carta</rdfs:label>
+        <rdfs:label xml:lang="it">Linguaggio della Carta</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Localization</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -741,9 +743,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Artist">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">The author of an artwork, used for the cards&apos; illustrations.</rdfs:comment>
         <rdfs:label xml:lang="en">Artist</rdfs:label>
         <rdfs:label xml:lang="it">Artista</rdfs:label>
-        <rdfs:label xml:lang="en">The author of an artwork, used for the cards&apos; illustrations.</rdfs:label>
     </owl:Class>
     
 
@@ -752,7 +754,7 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Artwork">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:comment xml:lang="it">This class is used to define all the illustrations used for cards.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class is used to define all the illustrations used for cards.</rdfs:comment>
         <rdfs:label xml:lang="en">Artwork</rdfs:label>
         <rdfs:label xml:lang="it">Illustrazione</rdfs:label>
     </owl:Class>
@@ -807,9 +809,9 @@ Represents the concept of a an entity being a member of a collection, which in t
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:comment xml:lang="en">This class represents cards which have a less than good condition or with any imperfection.</rdfs:comment>
         <rdfs:label xml:lang="en">Bad State Card</rdfs:label>
         <rdfs:label xml:lang="it">Carta In Cattivo Stato</rdfs:label>
-        <rdfs:label xml:lang="en">This class represents cards which have a less than good condition or with any imperfection.</rdfs:label>
     </owl:Class>
     
 
@@ -817,8 +819,8 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#Card -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Card">
+        <rdfs:comment xml:lang="en">Card abstraction with name and game mechanics.</rdfs:comment>
         <rdfs:label xml:lang="en">Card</rdfs:label>
-        <rdfs:label xml:lang="en">Card abstraction with name and game mechanics.</rdfs:label>
         <rdfs:label xml:lang="it">Carta</rdfs:label>
     </owl:Class>
     
@@ -851,8 +853,8 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation">
+        <rdfs:comment xml:lang="en">Class encompassing all possible variation that a game might give to its Card Prints. A classic example might be a special sheen layer on top making it &quot;Foil&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print Variation</rdfs:label>
-        <rdfs:label xml:lang="en">Class encompassing all possible variation that a game might give to its Card Prints. A classic example might be a special sheen layer on top making it &quot;Foil&quot;.</rdfs:label>
         <rdfs:label xml:lang="en">Variazione di Card Print</rdfs:label>
     </owl:Class>
     
@@ -1151,8 +1153,8 @@ Represents the concept of a an entity being a member of a collection, which in t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:comment xml:lang="it">Carta Singola ad Alta Disponibilità</rdfs:comment>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a low normalized availabiltiy (range 0-25%).</rdfs:comment>
+        <rdfs:label xml:lang="it">Carta Singola ad Alta Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">Low Availability Single Card</rdfs:label>
     </owl:Class>
     
@@ -1185,9 +1187,9 @@ Represents the concept of a an entity being a member of a collection, which in t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
-        <rdfs:comment xml:lang="it">Set a Bassa Disponibilità</rdfs:comment>
         <rdfs:comment xml:lang="en">This class groups sets wich have a low normalized availabiltiy (range 0-25%).</rdfs:comment>
         <rdfs:label xml:lang="en">Low Availability Set</rdfs:label>
+        <rdfs:label xml:lang="it">Set a Bassa Disponibilità</rdfs:label>
     </owl:Class>
     
 
@@ -1300,8 +1302,8 @@ Represents the concept of a an entity being a member of a collection, which in t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:comment xml:lang="it">Carta Singola a Media Disponibilità</rdfs:comment>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a medium normalized availabiltiy (range 25-75%).</rdfs:comment>
+        <rdfs:label xml:lang="it">Carta Singola a Media Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">Medium Availability Single Card</rdfs:label>
     </owl:Class>
     
@@ -1393,7 +1395,7 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a medium high average market price.</rdfs:comment>
-        <rdfs:label xml:lang="en">Carta a Prezzo Medio-Alto</rdfs:label>
+        <rdfs:label xml:lang="it">Carta a Prezzo Medio-Alto</rdfs:label>
         <rdfs:label xml:lang="en">Medium High Priced Card</rdfs:label>
     </owl:Class>
     
@@ -1483,7 +1485,7 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich are not present on the market as Single Card.</rdfs:comment>
-        <rdfs:label xml:lang="en">Carta Singola Non Disponibile</rdfs:label>
+        <rdfs:label xml:lang="it">Carta Singola Non Disponibile</rdfs:label>
         <rdfs:label xml:lang="en">No Availability Single Card</rdfs:label>
     </owl:Class>
     
@@ -1543,9 +1545,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
+        <rdfs:comment xml:lang="en">This class defines the physical exemplar of a card with all its relevant attributes.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Fisica</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card</rdfs:label>
-        <rdfs:label xml:lang="en">This class defines the physical exemplar of a card with all its relevant attributes.</rdfs:label>
     </owl:Class>
     
 
@@ -1679,7 +1681,7 @@ Represents the concept of a an entity being a member of a collection, which in t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:comment xml:lang="it">This class groups card prints wich are not present on the market, or there are very few with a very high price, making them of high interest to collectionists.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class groups card prints wich are not present on the market, or there are very few with a very high price, making them of high interest to collectionists.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Notevole</rdfs:label>
         <rdfs:label xml:lang="en">Remarkable Card</rdfs:label>
     </owl:Class>
@@ -1785,8 +1787,8 @@ Represents the concept of a an entity being a member of a collection, which in t
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:comment xml:lang="en">This class groups card prints wich have a very low average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta a Prezzo Molto Basso</rdfs:label>
-        <rdfs:label xml:lang="it">This class groups card prints wich have a very low average market price.</rdfs:label>
         <rdfs:label xml:lang="en">Very Low Priced Card</rdfs:label>
     </owl:Class>
     
