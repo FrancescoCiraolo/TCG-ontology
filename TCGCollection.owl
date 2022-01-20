@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/ACFC/TCGCollection#"
-     xml:base="http://www.semanticweb.org/ACFC/TCGCollection"
+<rdf:RDF xmlns="http://www.purl.org/cp_team/TCGCollection"
+     xml:base="http://www.purl.org/cp_team/TCGCollection"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,8 +10,8 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:TCGCollection="http://www.semanticweb.org/ACFC/ontologies/2022/0/TCGCollection#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ACFC/TCGCollection">
+     xmlns:TCGCollection="http://www.purl.org/cp_team/TCGCollection#">
+    <owl:Ontology rdf:about="http://www.purl.org/cp_team/TCGCollection">
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonio Casoli</dc:creator>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francesco Ciraolo</dc:creator>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology designed for collectionists in the Trading Card Games domain</dc:description>
@@ -103,10 +103,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#artworkOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#artworkOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#artworkOf">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printArtwork"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#artworkOf">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#printArtwork"/>
         <rdfs:comment xml:lang="en">Link between artwork and the CardPrints. This property is an inverse property of printArtwork.</rdfs:comment>
         <rdfs:label xml:lang="en">Artwork Of</rdfs:label>
         <rdfs:label xml:lang="it">Illustrazione Di</rdfs:label>
@@ -114,11 +114,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#availability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#availability -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#availability">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Availability"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#availability">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Availability"/>
         <rdfs:comment xml:lang="en">Availability of card prints.</rdfs:comment>
         <rdfs:label xml:lang="en">Availability</rdfs:label>
         <rdfs:label xml:lang="en">Disponibilità</rdfs:label>
@@ -126,13 +126,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#betterConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#betterConditionThan">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#worseConditionThan"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition"/>
         <rdfs:comment xml:lang="en">Positive comparison property for physical card condition. This property is an inverse property of worseConditionThan.</rdfs:comment>
         <rdfs:label xml:lang="en">Better Condition Than</rdfs:label>
         <rdfs:label xml:lang="it">Stato di Conservazione Migliore Di</rdfs:label>
@@ -140,14 +140,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#betterPhysicalCardConditionThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#betterPhysicalCardConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterPhysicalCardConditionThan">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#betterPhysicalCardConditionThan">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#betterConditionThan"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#condition"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#betterConditionThan"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Positive comparison property for physical card with physical card condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Better Physical Card Condition Than</rdfs:label>
@@ -156,14 +156,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#cardPrintVariation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#cardPrintVariation">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#cardPrintVariationOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrintVariation"/>
         <rdfs:comment xml:lang="en">Link between card print and its variations. This property is an inverse property of cardPrintVariationOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print Variation</rdfs:label>
         <rdfs:label xml:lang="it">Card Print con Variazione</rdfs:label>
@@ -171,9 +171,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#cardPrintVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariationOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#cardPrintVariationOf">
         <rdfs:comment xml:lang="en">Link between a card print variation and the card prints. This property is an inverse property of cardPrintVariation.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print Variation Of</rdfs:label>
         <rdfs:label xml:lang="it">Variazione Associata a Card Print</rdfs:label>
@@ -181,14 +181,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#condition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#condition -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#conditionOf"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#condition">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus"/>
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#conditionOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition"/>
         <rdfs:comment xml:lang="en">Link between PhysicalCard and a PhysicalCardCondition. This property is an inverse property of conditionOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Condition</rdfs:label>
         <rdfs:label xml:lang="it">Condizione</rdfs:label>
@@ -196,10 +196,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#conditionOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#conditionOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#conditionOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#conditionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatusOf"/>
         <rdfs:comment xml:lang="en">Link between PhysicalCardCondition and the PhysicalCards associated . This property is an inverse property of condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Condition Of</rdfs:label>
         <rdfs:label xml:lang="it">Condizione Di</rdfs:label>
@@ -207,10 +207,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#create -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#create -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#create">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#createdBy"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#create">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#createdBy"/>
         <rdfs:comment xml:lang="en">Link between Artist and Artwork. This property is an inverse property of createdBy.</rdfs:comment>
         <rdfs:label xml:lang="it">Crea</rdfs:label>
         <rdfs:label xml:lang="en">Create</rdfs:label>
@@ -218,12 +218,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#createdBy -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#createdBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#createdBy">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#createdBy">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artist"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artwork"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artist"/>
         <rdfs:comment xml:lang="en">Link between Artwork and Artist. This property is an inverse property of create.</rdfs:comment>
         <rdfs:label xml:lang="en">Created By</rdfs:label>
         <rdfs:label xml:lang="it">Creato Da</rdfs:label>
@@ -231,12 +231,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#exemplar -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#exemplar -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#exemplar">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#exemplarOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#exemplar">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#exemplarOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <rdfs:comment xml:lang="en">Link between CardPrint and the PhysicalCard. This property is an inverse property of exemplarOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Esemplare</rdfs:label>
         <rdfs:label xml:lang="en">Exemplar</rdfs:label>
@@ -244,9 +244,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#exemplarOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#exemplarOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#exemplarOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#exemplarOf">
         <rdfs:comment xml:lang="en">Link between PhysicalCard and the CardPrint. This property is an inverse property of exemplar.</rdfs:comment>
         <rdfs:label xml:lang="it">Esemplare</rdfs:label>
         <rdfs:label xml:lang="en">Exemplar</rdfs:label>
@@ -254,15 +254,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasArtwork -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#hasArtwork -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasArtwork">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#hasArtwork">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#isArtworkOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artwork"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printArtwork"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#printArtwork"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Link between a Card and its Artworks. This property is an inverse property of isArtworkOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Ha Illustrazione</rdfs:label>
@@ -271,15 +271,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasCardPrintVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#hasCardPrintVariation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasCardPrintVariation">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isCardPrintVariationOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#hasCardPrintVariation">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#isCardPrintVariationOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrintVariation"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardPrintVariation"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#cardPrintVariation"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Link between a Card and its CardPrintVariations. This property is an inverse property of isCardPrintVariationOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Ha una Variazione di Card Print</rdfs:label>
@@ -288,15 +288,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasExemplar -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#hasExemplar -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasExemplar">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isExemplarOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#hasExemplar">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#isExemplarOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#exemplar"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#exemplar"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Link between a PhysicalCard and the Card represented. This property is an inverse property of isExemplarOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Ha Esemplare</rdfs:label>
@@ -305,14 +305,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasMember -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#hasMember -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasMember">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#hasMember">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">Property taken from the Collection OWL Building Block.
 Represents the concept of a collection having a member, which in this instance is a Set and a CardPrint.</rdfs:comment>
         <rdfs:label xml:lang="it">Ha Membro</rdfs:label>
@@ -321,15 +321,15 @@ Represents the concept of a collection having a member, which in this instance i
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#hasRarity -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#hasRarity -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#hasRarity">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#hasRarity">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#isRarityOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Rarity"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#rarity"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Link between a Card and the Rarities in which is printed on. This property is an inverse property of isRarityOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Ha Rarità</rdfs:label>
@@ -338,9 +338,9 @@ Represents the concept of a collection having a member, which in this instance i
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#isArtworkOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isArtworkOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#isArtworkOf">
         <rdfs:comment xml:lang="en">Link between an Artwork and the Cards associated with it. This property is an inverse property of hasArtwork.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Artwork Of</rdfs:label>
         <rdfs:label xml:lang="it">É Illustrazione Di</rdfs:label>
@@ -348,9 +348,9 @@ Represents the concept of a collection having a member, which in this instance i
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isCardPrintVariationOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#isCardPrintVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isCardPrintVariationOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#isCardPrintVariationOf">
         <rdfs:comment xml:lang="en">Link between a CardPrintVariation and the Cards associated with it. This property is an inverse property of hasCardPrintVariation.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Card Print Variation Of</rdfs:label>
         <rdfs:label xml:lang="it">É una Variazione di Card Print Di</rdfs:label>
@@ -358,11 +358,11 @@ Represents the concept of a collection having a member, which in this instance i
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isExemplarOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#isExemplarOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isExemplarOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#isExemplarOf">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
         <rdfs:comment xml:lang="en">Link between a Card and the PhysicalCard examplar. This property is an inverse property of hasExemplar.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Exemplar Of</rdfs:label>
         <rdfs:label xml:lang="it">É Esemplare Di</rdfs:label>
@@ -370,13 +370,13 @@ Represents the concept of a collection having a member, which in this instance i
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#isMemberOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#isMemberOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:comment xml:lang="en">Property taken from the Collection OWL Building Block.
 Represents the concept of a an entity being a member of a collection, which in this instance is CardPrint and a Set.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Member Of</rdfs:label>
@@ -385,9 +385,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#isRarityOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#isRarityOf">
         <rdfs:comment xml:lang="en">Link between a Rarity and the Cards associated with it. This property is an inverse property of hasRarity.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Rarity Of</rdfs:label>
         <rdfs:label xml:lang="it">É Rarità Di</rdfs:label>
@@ -395,10 +395,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#lessRareThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#lessRareThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#lessRareThan">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#rarerThan"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#lessRareThan">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#rarerThan"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">Negative comparison property for Rarity. This property is an inverse property of rarerThan.</rdfs:comment>
         <rdfs:label xml:lang="en">Less Rare Than</rdfs:label>
@@ -407,12 +407,12 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardStatus -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatusOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardStatus"/>
         <rdfs:comment xml:lang="en">Link between PhysicalCard and any PhysicalCardStatus. This property is an inverse property of physicalCardStatusOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Condizione di Carta Fisica</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Status</rdfs:label>
@@ -420,9 +420,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardStatusOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardStatusOf">
         <rdfs:comment xml:lang="en">Link between PhysicalCardStatus and the PhysicalCards associated. This property is an inverse property of physicalCardStatus.</rdfs:comment>
         <rdfs:label xml:lang="it">Condizione di Carta Fisica Di</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Status Of</rdfs:label>
@@ -430,13 +430,13 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardVariation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariation">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariationOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardVariation">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus"/>
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardVariationOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalVariation"/>
         <rdfs:comment xml:lang="en">Link between PhysicalCard and a PhysicalVariation. This property is an inverse property of physicalCardVariationOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Card Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazione di Carta Fisica</rdfs:label>
@@ -444,10 +444,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariationOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardVariationOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardVariationOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatusOf"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardVariationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatusOf"/>
         <rdfs:comment xml:lang="en">Link between PhysicalVariation and the PhysicalCards associated. This property is an inverse property of physicalCardVariation.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Card Variation Of</rdfs:label>
         <rdfs:label xml:lang="it">Variazione di Carta Fisica Di</rdfs:label>
@@ -455,12 +455,12 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#priced -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#priced -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#priced">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#priced">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PriceRange"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PriceRange"/>
         <rdfs:comment xml:lang="en">Fits CardPrint into a PriceRange.</rdfs:comment>
         <rdfs:label xml:lang="en">Priced</rdfs:label>
         <rdfs:label xml:lang="it">Valutato</rdfs:label>
@@ -468,12 +468,12 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#print -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#print -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#print">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#printOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">Link between Card and the CardPrints associated. This property is an inverse property of printOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Print</rdfs:label>
         <rdfs:label xml:lang="it">Stampa</rdfs:label>
@@ -481,13 +481,13 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printArtwork -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#printArtwork -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printArtwork">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printArtwork">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artwork"/>
         <rdfs:comment xml:lang="en">Link between a CardPrint and its Artworks. This property is an inverse property of artworkOf.</rdfs:comment>
         <rdfs:label xml:lang="it">Card Print a Ilustrazione</rdfs:label>
         <rdfs:label xml:lang="en">Print Artwork</rdfs:label>
@@ -495,10 +495,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printLessRareThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#printLessRareThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printLessRareThan">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#printRarerThan"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printLessRareThan">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#printRarerThan"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">Negative comparison property between the rarity of CardPrints.</rdfs:comment>
         <rdfs:label xml:lang="en">Print Less Rare Than</rdfs:label>
@@ -507,9 +507,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#printOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printOf">
         <rdfs:comment xml:lang="en">Link between CardPrint and the Card associated. This property is an inverse property of print.</rdfs:comment>
         <rdfs:label xml:lang="en">Print Of</rdfs:label>
         <rdfs:label xml:lang="it">Stampa Di</rdfs:label>
@@ -517,16 +517,16 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#printRarerThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#printRarerThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#printRarerThan">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printRarerThan">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#isRarityOf"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#rarity"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#isRarityOf"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Positive comparison property between the rarity of CardPrints.</rdfs:comment>
         <rdfs:label xml:lang="it">Print Più Rara Di</rdfs:label>
@@ -535,12 +535,12 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#rarerThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#rarerThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarerThan">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#rarerThan">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Rarity"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Rarity"/>
         <rdfs:comment xml:lang="en">Positive comparison property for Rarity. This property is an inverse property of lessRareThan.</rdfs:comment>
         <rdfs:label xml:lang="it">Più Raro Di</rdfs:label>
         <rdfs:label xml:lang="en">Rarer Than</rdfs:label>
@@ -548,13 +548,13 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#rarity -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#rarity -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarity">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#rarityOf"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#rarity">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#rarityOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Rarity"/>
         <rdfs:comment xml:lang="en">Link between CardPrint and its Rarity. This property is an inverse property of rarityOf.</rdfs:comment>
         <rdfs:label xml:lang="en">Rarity</rdfs:label>
         <rdfs:label xml:lang="it">Rarità</rdfs:label>
@@ -562,9 +562,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#rarityOf -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#rarityOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#rarityOf">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#rarityOf">
         <rdfs:comment xml:lang="en">Link between a Rarity and the CardPrints associated. This property is an inverse property of rarity.</rdfs:comment>
         <rdfs:label xml:lang="en">Rarity Of</rdfs:label>
         <rdfs:label xml:lang="it">Rarità Di</rdfs:label>
@@ -572,9 +572,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#worseConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan">
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#worseConditionThan">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">Negative comparison property for physical card condition. This property is an inverse property of worseConditionThan.</rdfs:comment>
         <rdfs:label xml:lang="it">Stato di Conservazione Peggiore Di</rdfs:label>
@@ -583,14 +583,14 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#worsePhysicalCardConditionThan -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#worsePhysicalCardConditionThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#worsePhysicalCardConditionThan">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition"/>
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#worsePhysicalCardConditionThan">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#condition"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#worseConditionThan"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#condition"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#worseConditionThan"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Negative  comparison property for physical card with physical card condition.</rdfs:comment>
         <rdfs:label xml:lang="it">Stato di Conservazione di Carta Fisica Peggiore Di</rdfs:label>
@@ -619,11 +619,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#cardName -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#cardName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#cardName">
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#cardName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of the card.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Name</rdfs:label>
@@ -632,10 +632,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#marketAvailability -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketAvailability">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Card availabilty. It has to be a normalized value in [0,1] relative to the market situation.</rdfs:comment>
         <rdfs:label xml:lang="it">Disponibilità sul Mercato</rdfs:label>
@@ -644,11 +644,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketMinPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#marketMinPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketMinPrice">
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketMinPrice">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Minimum price available on the market.</rdfs:comment>
         <rdfs:label xml:lang="en">Market Min Price</rdfs:label>
@@ -657,11 +657,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#marketTrendPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice">
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Price taken as the market trend.</rdfs:comment>
         <rdfs:label xml:lang="en">Market Trend Price</rdfs:label>
@@ -670,10 +670,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#physicalCardLocalization -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardLocalization -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardLocalization">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardLocalization">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
         <rdfs:comment xml:lang="en">Localization used for the card.</rdfs:comment>
         <rdfs:label xml:lang="it">Linguaggio della Carta</rdfs:label>
@@ -682,11 +682,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#setName -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#setName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#setName">
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#setName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Name of the Set.</rdfs:comment>
         <rdfs:label xml:lang="it">Nome Set</rdfs:label>
@@ -695,10 +695,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#setReleaseDate -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#setReleaseDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#setReleaseDate">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#setReleaseDate">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Date indicating when the set is or has been released.</rdfs:comment>
         <rdfs:label xml:lang="it">Data di Rilascio del Set</rdfs:label>
@@ -738,9 +738,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Artist -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Artist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Artist">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Artist">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">The author of an artwork, used for the cards&apos; illustrations.</rdfs:comment>
@@ -750,9 +750,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Artwork -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Artwork -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Artwork">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Artwork">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:comment xml:lang="en">This class is used to define all the illustrations used for cards.</rdfs:comment>
         <rdfs:label xml:lang="en">Artwork</rdfs:label>
@@ -761,16 +761,16 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Availability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Availability -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Availability">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Availability">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#HighAvailability"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LowAvailability"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumAvailability"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NoAvailability"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -781,10 +781,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalVariation"/>
         <rdfs:comment xml:lang="en">This class groups the physical variations that lower the card condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Bad Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazioni Fisiche Peggiorative</rdfs:label>
@@ -792,23 +792,23 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#BadStateCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#BadStateCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#BadStateCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#BadStateCard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#worsePhysicalCardConditionThan"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#worsePhysicalCardConditionThan"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#GoodCondition"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+                <owl:onClass rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <rdfs:comment xml:lang="en">This class represents cards which have a less than good condition or with any imperfection.</rdfs:comment>
         <rdfs:label xml:lang="en">Bad State Card</rdfs:label>
         <rdfs:label xml:lang="it">Carta In Cattivo Stato</rdfs:label>
@@ -816,9 +816,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Card -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Card -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Card">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Card">
         <rdfs:comment xml:lang="en">Card abstraction with name and game mechanics.</rdfs:comment>
         <rdfs:label xml:lang="en">Card</rdfs:label>
         <rdfs:label xml:lang="it">Carta</rdfs:label>
@@ -826,11 +826,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardCollection -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#CardCollection -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardCollection">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#CardCollection">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <owl:disjointWith rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <rdfs:comment xml:lang="en">Generic concept of a collection, which might range from a single binder to a large group of them.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Collection</rdfs:label>
         <rdfs:label xml:lang="it">Collezione di Carte</rdfs:label>
@@ -838,11 +838,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardPrint -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#CardPrint -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
+        <owl:disjointWith rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:comment xml:lang="en">Abstraction relating a card, its set and its printing peculiarities.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print</rdfs:label>
         <rdfs:label xml:lang="it">Card Print</rdfs:label>
@@ -850,9 +850,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#CardPrintVariation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrintVariation">
         <rdfs:comment xml:lang="en">Class encompassing all possible variation that a game might give to its Card Prints. A classic example might be a special sheen layer on top making it &quot;Foil&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Card Print Variation</rdfs:label>
         <rdfs:label xml:lang="en">Variazione di Card Print</rdfs:label>
@@ -860,9 +860,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Collectionist -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Collectionist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Collectionist">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Collectionist">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#ResponsibleEntity"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">Entity representing the person collecting cards.</rdfs:comment>
@@ -872,10 +872,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#GoodPhysicalVariation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#GoodPhysicalVariation">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalVariation"/>
         <rdfs:comment xml:lang="en">This class groups the physical variations that improve the card condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Good Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazioni Fisiche Migliorative</rdfs:label>
@@ -883,16 +883,16 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GoodStateCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#GoodStateCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodStateCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#GoodStateCard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#betterPhysicalCardConditionThan"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#betterPhysicalCardConditionThan"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <rdfs:comment xml:lang="en">This class represents cards which are in a good condition or better.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta In Buono Stato</rdfs:label>
         <rdfs:label xml:lang="en">Good State Card</rdfs:label>
@@ -900,64 +900,64 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HACard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#HACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HACard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#HACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HASCard"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#HASCard"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -966,11 +966,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#availability"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#HighAvailability"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">A card is a member of this class if it&apos;s either highly available or if its set is easy to find.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta ad Alta Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">High Availabilty Card</rdfs:label>
@@ -978,15 +978,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HASCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#HASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HASCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#HASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1001,7 +1001,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="it">This class groups card prints wich have a high normalized availabiltiy (above 75%).</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Singola ad Alta Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">High Availability Single Card</rdfs:label>
@@ -1009,15 +1009,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HASet -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#HASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HASet">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#HASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1032,7 +1032,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:comment xml:lang="en">This class groups sets wich have a high normalized availabiltiy (above 75%).</rdfs:comment>
         <rdfs:label xml:lang="en">High Availability Set</rdfs:label>
         <rdfs:label xml:lang="it">Set ad Alta Disponibilità</rdfs:label>
@@ -1040,15 +1040,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HighPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#HighPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#HighPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1068,11 +1068,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#HighPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#HighPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a high average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta ad Alto Prezzo</rdfs:label>
         <rdfs:label xml:lang="en">High Priced Card</rdfs:label>
@@ -1080,16 +1080,16 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LACard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LACard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#LACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
-                        <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#availability"/>
+                        <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#LowAvailability"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1099,26 +1099,26 @@ Represents the concept of a an entity being a member of a collection, which in t
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">A card is a member of this class if it&apos;s hard to find both itself and its set.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta a Bassa Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">Low Availability Card</rdfs:label>
@@ -1126,15 +1126,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LASCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1152,7 +1152,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a low normalized availabiltiy (range 0-25%).</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Singola ad Alta Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">Low Availability Single Card</rdfs:label>
@@ -1160,15 +1160,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LASet -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASet">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#LASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1186,7 +1186,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:comment xml:lang="en">This class groups sets wich have a low normalized availabiltiy (range 0-25%).</rdfs:comment>
         <rdfs:label xml:lang="en">Low Availability Set</rdfs:label>
         <rdfs:label xml:lang="it">Set a Bassa Disponibilità</rdfs:label>
@@ -1194,15 +1194,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LowPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LowPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#LowPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1222,11 +1222,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LowPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#LowPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a high average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta a Basso Prezzo</rdfs:label>
         <rdfs:label xml:lang="en">Low Priced Card</rdfs:label>
@@ -1234,27 +1234,27 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MACard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MACard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#MACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LASCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASet"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASet"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
+                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -1263,11 +1263,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#availability"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#MediumAvailability"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">A card is a member of this class if it&apos;s normal to find without major difficulties.</rdfs:comment>
         <rdfs:label xml:lang="it">Carda a Media Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">Medium Availability Card</rdfs:label>
@@ -1275,15 +1275,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MASCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1301,7 +1301,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a medium normalized availabiltiy (range 25-75%).</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Singola a Media Disponibilità</rdfs:label>
         <rdfs:label xml:lang="en">Medium Availability Single Card</rdfs:label>
@@ -1309,15 +1309,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MASet -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MASet">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#MASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1335,7 +1335,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:comment xml:lang="en">This class groups sets wich have a medium normalized availabiltiy (range 25-75%).</rdfs:comment>
         <rdfs:label xml:lang="en">Medium Availability Set</rdfs:label>
         <rdfs:label xml:lang="it">Set a Media Disponibilità</rdfs:label>
@@ -1343,14 +1343,14 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MeaninglessCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MeaninglessCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MeaninglessCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#MeaninglessCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HACard"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPricedCard"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#HACard"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LowPricedCard"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1361,15 +1361,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MediumHighPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumHighPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1389,11 +1389,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#MediumHighPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a medium high average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta a Prezzo Medio-Alto</rdfs:label>
         <rdfs:label xml:lang="en">Medium High Priced Card</rdfs:label>
@@ -1401,15 +1401,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MediumPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1429,11 +1429,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#MediumPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a medium average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta a Prezzo Medio</rdfs:label>
         <rdfs:label xml:lang="en">Medium Priced Card</rdfs:label>
@@ -1441,27 +1441,27 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NACard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NACard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NACard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#NACard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NASCard"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#isMemberOf"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NASet"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#availability"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#NoAvailability"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich are not present on the market nor their set.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Non Disponibile</rdfs:label>
         <rdfs:label xml:lang="en">No Availability Card</rdfs:label>
@@ -1469,21 +1469,21 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NASCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NASCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#NASCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich are not present on the market as Single Card.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Singola Non Disponibile</rdfs:label>
         <rdfs:label xml:lang="en">No Availability Single Card</rdfs:label>
@@ -1491,21 +1491,21 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NASet -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NASet -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NASet">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#NASet">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#Set"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketAvailability"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketAvailability"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
         <rdfs:comment xml:lang="en">This class groups sets wich are not present on the market.</rdfs:comment>
         <rdfs:label xml:lang="en">No Availability Set</rdfs:label>
         <rdfs:label xml:lang="it">Set Non Disponibili</rdfs:label>
@@ -1513,15 +1513,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NotPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NotPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NotPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#NotPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1529,11 +1529,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NoPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#NoPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich are not valued with a price on the market.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Senza Prezzo</rdfs:label>
         <rdfs:label xml:lang="en">Not Priced Card</rdfs:label>
@@ -1541,9 +1541,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PhysicalCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PhysicalCard">
         <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
         <rdfs:comment xml:lang="en">This class defines the physical exemplar of a card with all its relevant attributes.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Fisica</rdfs:label>
@@ -1552,11 +1552,11 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardAlteredArtwork -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PhysicalCardAlteredArtwork -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardAlteredArtwork">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PhysicalCardAlteredArtwork">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artwork"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#GoodPhysicalVariation"/>
         <rdfs:comment xml:lang="en">This class considers the variation on those cards whose artwork has been artistically altered.</rdfs:comment>
         <rdfs:label xml:lang="en">Altered Artwork on Physical Card</rdfs:label>
         <rdfs:label xml:lang="it">Artwork Alterato su Carta Fisica</rdfs:label>
@@ -1564,23 +1564,23 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardCondition">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PhysicalCardCondition">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MintCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#ExcellentCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#GoodCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MintCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NearMintCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#PlayedCondition"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#PoorCondition"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardStatus"/>
         <rdfs:comment xml:lang="en">This class the physical condition in which the physical card is.</rdfs:comment>
         <rdfs:label xml:lang="it">Condizione Di Carta Fisica</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Condition</rdfs:label>
@@ -1588,10 +1588,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardSignature -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PhysicalCardSignature -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardSignature">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PhysicalCardSignature">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#GoodPhysicalVariation"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:comment xml:lang="en">This class defines the variation of cards given by signatures of relevant people to the collectionism community.</rdfs:comment>
         <rdfs:label xml:lang="it">Firma su Carte Fisiche</rdfs:label>
@@ -1600,9 +1600,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PhysicalCardStatus -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PhysicalCardStatus">
         <rdfs:comment xml:lang="en">This class defines the possible variation and condition affecting or defining physical cards.</rdfs:comment>
         <rdfs:label xml:lang="it">Condizione Di una Carta Fisica</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Status</rdfs:label>
@@ -1610,10 +1610,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PhysicalVariation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalVariation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardStatus"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PhysicalVariation">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardStatus"/>
         <rdfs:comment xml:lang="en">This class defines the Variations that might affect physical cards.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazioni Fisiche</rdfs:label>
@@ -1621,19 +1621,19 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PriceRange -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PriceRange -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PriceRange">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#PriceRange">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#HighPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LowPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumHighPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NoPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryHighPrice"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryLowPrice"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1644,9 +1644,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Product -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Product -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Product">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Product">
         <rdfs:comment xml:lang="en">This class defines the possible products available for purchase.</rdfs:comment>
         <rdfs:label xml:lang="it">Prodotto</rdfs:label>
         <rdfs:label xml:lang="en">Product</rdfs:label>
@@ -1654,9 +1654,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Rarity -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Rarity -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Rarity">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Rarity">
         <rdfs:comment xml:lang="en">Class used to define the card rarity category system employed by all TCG games.</rdfs:comment>
         <rdfs:label xml:lang="en">Rarity</rdfs:label>
         <rdfs:label xml:lang="it">Rarità</rdfs:label>
@@ -1664,23 +1664,23 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#RemarkableCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#RemarkableCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#RemarkableCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#RemarkableCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NACard"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NACard"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPricedCard"/>
-                            <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LACard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#HighPricedCard"/>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LACard"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich are not present on the market, or there are very few with a very high price, making them of high interest to collectionists.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Notevole</rdfs:label>
         <rdfs:label xml:lang="en">Remarkable Card</rdfs:label>
@@ -1688,10 +1688,10 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#Set -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#Set -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#Set">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Product"/>
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Set">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
         <rdfs:comment xml:lang="en">This class defines a card set, which is a form of card release usually associated with a specific theme. Every set has a certain amount of cards associated to it.</rdfs:comment>
         <rdfs:label xml:lang="en">Set</rdfs:label>
         <rdfs:label xml:lang="it">Set</rdfs:label>
@@ -1699,17 +1699,17 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#UniqueCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#UniqueCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#UniqueCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#UniqueCard">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#physicalCardStatus"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodPhysicalVariation"/>
+                <owl:onClass rdf:resource="http://www.purl.org/cp_team/TCGCollection#GoodPhysicalVariation"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
         <rdfs:comment xml:lang="en">This class represents cards which have at least one good variation on them that makes them unique.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta Unica</rdfs:label>
         <rdfs:label xml:lang="en">Unique Card</rdfs:label>
@@ -1717,15 +1717,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#VeryHighPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryHighPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1742,11 +1742,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#VeryHighPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a high average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta ad Alto Prezzo</rdfs:label>
         <rdfs:label xml:lang="en">Very High Priced Card</rdfs:label>
@@ -1754,15 +1754,15 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPricedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#VeryLowPricedCard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPricedCard">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryLowPricedCard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#marketTrendPrice"/>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -1782,11 +1782,11 @@ Represents the concept of a an entity being a member of a collection, which in t
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#priced"/>
-                <owl:hasValue rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
+                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#priced"/>
+                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#VeryLowPrice"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">This class groups card prints wich have a very low average market price.</rdfs:comment>
         <rdfs:label xml:lang="it">Carta a Prezzo Molto Basso</rdfs:label>
         <rdfs:label xml:lang="en">Very Low Priced Card</rdfs:label>
@@ -1825,275 +1825,275 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#BendPhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#BendPhysicalVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#BendPhysicalVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#BendPhysicalVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#CloudingPhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#CloudingPhysicalVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#CloudingPhysicalVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#CloudingPhysicalVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleArtist -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artist"/>
-        <create rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtwork"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleArtist">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artist"/>
+        <TCGCollection:create rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleArtwork"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtwork -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleArtwork -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtwork">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Artwork"/>
-        <artworkOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleArtwork">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#Artwork"/>
+        <TCGCollection:artworkOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Card"/>
-        <print rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
-        <cardName>Example</cardName>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleCard">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#Card"/>
+        <TCGCollection:print rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint"/>
+        <TCGCollection:cardName>Example</TCGCollection:cardName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrint"/>
-        <isMemberOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet"/>
-        <marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</marketAvailability>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <TCGCollection:isMemberOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleSet"/>
+        <TCGCollection:marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</TCGCollection:marketAvailability>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleFoilVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleFoilVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleFoilVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#CardPrintVariation"/>
-        <cardPrintVariationOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleFoilVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrintVariation"/>
+        <TCGCollection:cardPrintVariationOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleNMPhysicalCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleNMPhysicalCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleNMPhysicalCard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <condition rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition"/>
-        <exemplarOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
-        <physicalCardLocalization rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</physicalCardLocalization>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleNMPhysicalCard">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <TCGCollection:condition rdf:resource="http://www.purl.org/cp_team/TCGCollection#NearMintCondition"/>
+        <TCGCollection:exemplarOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint"/>
+        <TCGCollection:physicalCardLocalization rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</TCGCollection:physicalCardLocalization>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExamplePoorPhysicalCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExamplePoorPhysicalCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExamplePoorPhysicalCard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <condition rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
-        <exemplarOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExamplePoorPhysicalCard">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <TCGCollection:condition rdf:resource="http://www.purl.org/cp_team/TCGCollection#PoorCondition"/>
+        <TCGCollection:exemplarOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleSet -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSet">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Set"/>
-        <marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</marketAvailability>
-        <setName rdf:datatype="http://www.w3.org/2001/XMLSchema#language">SuperSet</setName>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleSet">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
+        <TCGCollection:marketAvailability rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</TCGCollection:marketAvailability>
+        <TCGCollection:setName rdf:datatype="http://www.w3.org/2001/XMLSchema#language">SuperSet</TCGCollection:setName>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedCard -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleSignedCard -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedCard">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCard"/>
-        <physicalCardVariation rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleSignedCard">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <TCGCollection:physicalCardVariation rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleSignedVariation"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleSignedVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSignedVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PhysicalCardSignature"/>
-        <prov:wasAttributedTo rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleArtist"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleSignedVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardSignature"/>
+        <prov:wasAttributedTo rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleArtist"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExampleSuperDuperRarity -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExampleSuperDuperRarity -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExampleSuperDuperRarity">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#Rarity"/>
-        <rarityOf rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExampleCardPrint"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExampleSuperDuperRarity">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#Rarity"/>
+        <TCGCollection:rarityOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExampleCardPrint"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ExcellentCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExcellentCondition">
+        <TCGCollection:betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#GoodCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#FadedPhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#FadedPhysicalVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#FadedPhysicalVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#FadedPhysicalVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#GoodCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#GoodCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#GoodCondition">
+        <TCGCollection:betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#HighAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#HighAvailability"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#HighPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#HighPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#HighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#HighPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LightPlayedCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition">
+        <TCGCollection:betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#PlayedCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LowAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LowAvailability"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#LowPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#LowPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#LowPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LowPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MediumAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumAvailability"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MediumHighPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumHighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumHighPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MediumPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MediumPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#MintCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#MintCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#MintCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MintCondition">
+        <TCGCollection:betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#NearMintCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NearMintCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NearMintCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#ExcellentCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NearMintCondition">
+        <TCGCollection:betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExcellentCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NoAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NoAvailability"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#NoPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#NoPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#NoPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NoPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PlayedCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PlayedCondition">
-        <betterConditionThan rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#PlayedCondition">
+        <TCGCollection:betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#PoorCondition"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#PoorCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#PoorCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#PoorCondition"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#ScratchPhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#ScratchPhysicalVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#ScratchPhysicalVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ScratchPhysicalVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#TearPhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#TearPhysicalVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#TearPhysicalVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#TearPhysicalVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#VeryHighPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryHighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryHighPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#VeryLowPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#VeryLowPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryLowPrice"/>
     
 
 
-    <!-- http://www.semanticweb.org/ACFC/TCGCollection#WaterDamagePhysicalVariation -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#WaterDamagePhysicalVariation -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ACFC/TCGCollection#WaterDamagePhysicalVariation">
-        <rdf:type rdf:resource="http://www.semanticweb.org/ACFC/TCGCollection#BadPhysicalVariaton"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#WaterDamagePhysicalVariation">
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
