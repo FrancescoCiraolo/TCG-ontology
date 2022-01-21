@@ -461,7 +461,7 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#priced">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PriceRange"/>
         <rdfs:comment xml:lang="en">Fits CardPrint into a PriceRange.</rdfs:comment>
         <rdfs:label xml:lang="en">Priced</rdfs:label>
@@ -634,12 +634,21 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
+    <!-- http://www.purl.org/cp_team/TCGCollection#cardPrintNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#cardPrintNumber">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.purl.org/cp_team/TCGCollection#marketAvailability -->
 
     <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketAvailability">
         <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment xml:lang="en">Card availabilty. It has to be a normalized value in [0,1] relative to the market situation.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Card availabilty on the market.</rdfs:comment>
         <rdfs:label xml:lang="it">Disponibilità sul Mercato</rdfs:label>
         <rdfs:label xml:lang="en">Market Availabilty</rdfs:label>
     </owl:DatatypeProperty>
@@ -776,7 +785,7 @@ Represents the concept of a an entity being a member of a collection, which in t
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:comment xml:lang="en">Enumerated class defining different levels of availabilty.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Enumerated class defining different levels of availabilty based on the normalized range on the market.</rdfs:comment>
         <rdfs:label xml:lang="en">Availability</rdfs:label>
         <rdfs:label xml:lang="it">Disponibilità</rdfs:label>
     </owl:Class>
