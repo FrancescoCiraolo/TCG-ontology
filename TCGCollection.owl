@@ -119,7 +119,7 @@
     <!-- http://www.purl.org/cp_team/TCGCollection#availability -->
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#availability">
-        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
         <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Availability"/>
         <rdfs:comment xml:lang="en">Availability of card prints.</rdfs:comment>
         <rdfs:label xml:lang="en">Availability</rdfs:label>
