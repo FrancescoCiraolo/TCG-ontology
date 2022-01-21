@@ -20,7 +20,7 @@
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCGCollection Ontology</dc:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tcgc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.purl.org/cp_team/TCGCollection#</vann:preferredNamespaceUri>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TradingCardGamesCollectionOntology</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trading Card Games Collection Ontology</rdfs:label>
     </owl:Ontology>
     
 
