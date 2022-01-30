@@ -2,6 +2,7 @@
 :		http://www.purl.org/cp_team/TCGCollection#
 dc:		http://purl.org/dc/elements/1.1/
 wd:		http://www.wikidata.org/entity/
+dbr:		http://dbpedia.org/resource/
 owl:		http://www.w3.org/2002/07/owl#
 rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
 xml:		http://www.w3.org/XML/1998/namespace
@@ -23,8 +24,8 @@ target		:Rarity_{id} a :Rarity ; rdfs:label {rarity} .
 source		select id, rarity from mtg_rarities;
 
 mappingId	Artists
-target		:Artist_{id} a :Artist ; foaf:name {name}@en ; rdfs:label {name}@en ; owl:sameAs wd:{wikidata} . 
-source		select id, name, wikidata from artists;
+target		:Artist_{id} a :Artist ; foaf:name {name}@en ; rdfs:label {name}@en ; owl:sameAs wd:{wikidata} , dbr:{dbpedia} . 
+source		select * from artists;
 
 mappingId	Artworks
 target		:Artwork_{artwork} a :Artwork ; :createdBy :Artist_{artist} . 

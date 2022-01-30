@@ -3,6 +3,7 @@
      xml:base="http://www.purl.org/cp_team/TCGCollection"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:wd="http://www.wikidata.org/entity/"
+     xmlns:dbr="http://dbpedia.org/resource/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -530,7 +531,7 @@ Represents the concept of a an entity being a member of a collection, which in t
             <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#printOf"/>
             <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
         </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="en">Link between alternative CardPrints for the same card</rdfs:comment>
+        <rdfs:comment xml:lang="en">Link between alternative CardPrints for the same card.</rdfs:comment>
         <rdfs:label xml:lang="it">Print Alternativa</rdfs:label>
         <rdfs:label xml:lang="en">Print Alternative</rdfs:label>
     </owl:ObjectProperty>
@@ -594,6 +595,19 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdfs:comment xml:lang="en">Link between a Rarity and the CardPrints associated. This property is an inverse property of rarity.</rdfs:comment>
         <rdfs:label xml:lang="en">Rarity Of</rdfs:label>
         <rdfs:label xml:lang="it">Rarità Di</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#signatureBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#signatureBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCardSignature"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#VIP"/>
+        <rdfs:comment>Attribution of signature to an Agent.</rdfs:comment>
+        <rdfs:label xml:lang="it">Firma di</rdfs:label>
+        <rdfs:label xml:lang="en">Signature By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -786,8 +800,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#Artist -->
 
     <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Artist">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#VIP"/>
         <rdfs:comment xml:lang="en">The author of an artwork, used for the cards&apos; illustrations.</rdfs:comment>
         <rdfs:label xml:lang="en">Artist</rdfs:label>
         <rdfs:label xml:lang="it">Artista</rdfs:label>
@@ -1616,6 +1629,18 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
+    <!-- http://www.purl.org/cp_team/TCGCollection#VIP -->
+
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#VIP">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A very important person for the collectionism community, whose card alterations give value to the card.</rdfs:comment>
+        <rdfs:label xml:lang="en">VIP</rdfs:label>
+        <rdfs:label xml:lang="it">VIP</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.purl.org/cp_team/TCGCollection#VeryHighPricedCard -->
 
     <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryHighPricedCard">
@@ -1662,9 +1687,7 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <!-- http://www.w3.org/ns/prov#Agent -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
-        <rdfs:label>ArtworkAuthor</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
     
 
 
@@ -1695,6 +1718,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#BendPhysicalVariation">
         <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdfs:comment xml:lang="en">Variation for physical cards which are bended.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bend Physical Variation</rdfs:label>
+        <rdfs:label xml:lang="it">Variazione Fisica di Piegatura</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1703,6 +1729,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#CloudingPhysicalVariation">
         <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdfs:comment xml:lang="en">Variation for physical cards which are clouded.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clouding Physical Variation</rdfs:label>
+        <rdfs:label xml:lang="it">Variazione Fisica di Polvere</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1711,6 +1740,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ExcellentCondition">
         <betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#GoodCondition"/>
+        <rdfs:comment xml:lang="en">An Excellent cards look like it was used for a few games without sleeves.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Eccellente</rdfs:label>
+        <rdfs:label xml:lang="en">Excellent Condition</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1719,6 +1751,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#FadedPhysicalVariation">
         <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdfs:comment xml:lang="en">Variation for physical cards which are faded.</rdfs:comment>
+        <rdfs:label xml:lang="en">Faded Physical Variation</rdfs:label>
+        <rdfs:label xml:lang="it">Variazione Fisica di Dissolvenza</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1727,19 +1762,30 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#GoodCondition">
         <betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition"/>
+        <rdfs:comment xml:lang="en">A Good card looks like it might have been used for a long tournament without sleeves.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Buona</rdfs:label>
+        <rdfs:label xml:lang="en">Good Condition</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#HighAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#HighAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#HighAvailability">
+        <rdfs:comment xml:lang="en">High Availability for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Alta Disponibilità</rdfs:label>
+        <rdfs:label xml:lang="en">High Availability</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#HighPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#HighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#HighPrice">
+        <rdfs:comment xml:lang="en">High Price for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">High Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo Alto</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1747,37 +1793,60 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LightPlayedCondition">
         <betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#PlayedCondition"/>
+        <rdfs:comment xml:lang="en">A Light Played card looks as if it has been used without sleeves for an extended period of time.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Poco Giocata</rdfs:label>
+        <rdfs:label xml:lang="en">Light Played Condition</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#LowAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LowAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LowAvailability">
+        <rdfs:comment xml:lang="en">Low Availability for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Bassa Disponibilità</rdfs:label>
+        <rdfs:label xml:lang="en">Low Availability</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#LowPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LowPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#LowPrice">
+        <rdfs:comment xml:lang="en">Low Price for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">Low Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo Basso</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#MediumAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumAvailability">
+        <rdfs:comment xml:lang="en">Medium Availability for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Disponibilità Bassa</rdfs:label>
+        <rdfs:label xml:lang="en">Medium Availability</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#MediumHighPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumHighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumHighPrice">
+        <rdfs:comment xml:lang="en">Medium High Price for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium High Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo Medio Alto</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#MediumPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MediumPrice">
+        <rdfs:comment xml:lang="en">Medium Price for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo Medio</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1785,6 +1854,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#MintCondition">
         <betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#NearMintCondition"/>
+        <rdfs:comment xml:lang="en">A mint card is in perfect condition; no excuses.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Mint</rdfs:label>
+        <rdfs:label xml:lang="en">Mint Condition</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1793,19 +1865,30 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NearMintCondition">
         <betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#ExcellentCondition"/>
+        <rdfs:comment xml:lang="en">A Near Mint card looks like it has never been played without sleeves. Small allowances can be made, but the card generally shows no wear.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Near Mint</rdfs:label>
+        <rdfs:label xml:lang="en">Near Mint Condition</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#NoAvailability -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NoAvailability"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NoAvailability">
+        <rdfs:comment xml:lang="en">Medium Availability for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Nessuna Disponibilità</rdfs:label>
+        <rdfs:label xml:lang="en">No Availability</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#NoPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NoPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#NoPrice">
+        <rdfs:comment xml:lang="en">No Price available for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Nessun Prezzo</rdfs:label>
+        <rdfs:label xml:lang="en">No Price</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1813,13 +1896,20 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#PlayedCondition">
         <betterConditionThan rdf:resource="http://www.purl.org/cp_team/TCGCollection#PoorCondition"/>
+        <rdfs:comment xml:lang="en">A Played card looks as bad as you can get a card through regular use without sleeves.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Giocata</rdfs:label>
+        <rdfs:label xml:lang="en">Played Condition</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#PoorCondition -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#PoorCondition"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#PoorCondition">
+        <rdfs:comment xml:lang="en">A Poor card has damage that cannot normally have stemmed from regular use of the card.</rdfs:comment>
+        <rdfs:label xml:lang="it">Condizione Povera</rdfs:label>
+        <rdfs:label xml:lang="en">Poor Condition</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1827,6 +1917,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ScratchPhysicalVariation">
         <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdfs:comment xml:lang="en">Variation for physical cards which are scratched.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scratch Physical Variation</rdfs:label>
+        <rdfs:label xml:lang="it">Varaiazione Fisica di Graffio</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1835,19 +1928,30 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#TearPhysicalVariation">
         <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdfs:comment xml:lang="en">Variation for physical cards which have some wear and tear.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tear Physical Variation</rdfs:label>
+        <rdfs:label xml:lang="it">Variazione Fisica di Strappo</rdfs:label>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#VeryHighPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryHighPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryHighPrice">
+        <rdfs:comment xml:lang="en">Very High Price for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Prezzo Molto Alto</rdfs:label>
+        <rdfs:label xml:lang="en">Very High Price</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
     <!-- http://www.purl.org/cp_team/TCGCollection#VeryLowPrice -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryLowPrice"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#VeryLowPrice">
+        <rdfs:comment xml:lang="en">Very Low Price for a product on the market.</rdfs:comment>
+        <rdfs:label xml:lang="it">Prezzo Molto Basso</rdfs:label>
+        <rdfs:label xml:lang="en">Very Low Price</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1855,6 +1959,9 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#WaterDamagePhysicalVariation">
         <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdfs:comment xml:lang="en">Variation for physical cards which are water damaged.</rdfs:comment>
+        <rdfs:label xml:lang="it">Variazione Fisica di Danni d&apos;Acqua</rdfs:label>
+        <rdfs:label xml:lang="en">Water Damage Physical Variation</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
