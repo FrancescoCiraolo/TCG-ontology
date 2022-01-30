@@ -123,7 +123,7 @@
         <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Availability"/>
         <rdfs:comment xml:lang="en">Availability of card prints.</rdfs:comment>
         <rdfs:label xml:lang="en">Availability</rdfs:label>
-        <rdfs:label xml:lang="en">Disponibilità</rdfs:label>
+        <rdfs:label xml:lang="it">Disponibilità</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -409,6 +409,42 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
+    <!-- http://www.purl.org/cp_team/TCGCollection#marketMinPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketMinPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketPrice"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Price"/>
+        <rdfs:comment xml:lang="en">Property linking a product to its minimum price on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">Market Min Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo di Mercato Minimo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#marketPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketPrice">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#Price"/>
+        <rdfs:comment xml:lang="en">Generic property for products market prices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Market Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo Di Mercato</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#marketTrendPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#marketPrice"/>
+        <rdfs:comment xml:lang="en">Property linking a product to its trend price on the market.</rdfs:comment>
+        <rdfs:label xml:lang="en">Market Trend Price</rdfs:label>
+        <rdfs:label xml:lang="it">Prezzo Medio di Mercato</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardStatus -->
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus">
@@ -483,6 +519,24 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
+    <!-- http://www.purl.org/cp_team/TCGCollection#printAlternative -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printAlternative">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#printOf"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Link between alternative CardPrints for the same card</rdfs:comment>
+        <rdfs:label xml:lang="it">Print Alternativa</rdfs:label>
+        <rdfs:label xml:lang="en">Print Alternative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.purl.org/cp_team/TCGCollection#printArtwork -->
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printArtwork">
@@ -497,42 +551,12 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.purl.org/cp_team/TCGCollection#printLessRareThan -->
-
-    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printLessRareThan">
-        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#printRarerThan"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment xml:lang="en">Negative comparison property between the rarity of CardPrints.</rdfs:comment>
-        <rdfs:label xml:lang="en">Print Less Rare Than</rdfs:label>
-        <rdfs:label xml:lang="it">Print Meno Rara Di</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.purl.org/cp_team/TCGCollection#printOf -->
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printOf">
         <rdfs:comment xml:lang="en">Link between CardPrint and the Card associated. This property is an inverse property of print.</rdfs:comment>
         <rdfs:label xml:lang="en">Print Of</rdfs:label>
         <rdfs:label xml:lang="it">Stampa Di</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.purl.org/cp_team/TCGCollection#printRarerThan -->
-
-    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#printRarerThan">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#print"/>
-            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#rarity"/>
-            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#isRarityOf"/>
-        </owl:propertyChainAxiom>
-        <rdfs:comment xml:lang="en">Positive comparison property between the rarity of CardPrints.</rdfs:comment>
-        <rdfs:label xml:lang="it">Print Più Rara Di</rdfs:label>
-        <rdfs:label xml:lang="en">Print Rarer Than</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -638,7 +662,7 @@ Represents the concept of a an entity being a member of a collection, which in t
 
     <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#cardPrintNumber">
         <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -655,32 +679,6 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.purl.org/cp_team/TCGCollection#marketMinPrice -->
-
-    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketMinPrice">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment xml:lang="en">Minimum price available on the market.</rdfs:comment>
-        <rdfs:label xml:lang="en">Market Min Price</rdfs:label>
-        <rdfs:label xml:lang="it">Prezzo di Mercato Minimo</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.purl.org/cp_team/TCGCollection#marketTrendPrice -->
-
-    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#marketTrendPrice">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment xml:lang="en">Price taken as the market trend.</rdfs:comment>
-        <rdfs:label xml:lang="en">Market Trend Price</rdfs:label>
-        <rdfs:label xml:lang="it">Prezzo di Mercato Medio</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardLocalization -->
 
     <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardLocalization">
@@ -689,6 +687,42 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdfs:comment xml:lang="en">Localization used for the card.</rdfs:comment>
         <rdfs:label xml:lang="it">Linguaggio della Carta</rdfs:label>
         <rdfs:label xml:lang="en">Physical Card Localization</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#priceCurrency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#priceCurrency">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Currency associated with a Price.</rdfs:comment>
+        <rdfs:label>Price Currency</rdfs:label>
+        <rdfs:label xml:lang="it">Valuta del Prezzo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#priceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#priceValue">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Value given to a specific Price.</rdfs:comment>
+        <rdfs:label xml:lang="en">Price Value</rdfs:label>
+        <rdfs:label xml:lang="it">Valore del Prezzo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#setAbbr -->
+
+    <owl:DatatypeProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#setAbbr">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Set"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Abbreviation for the set name.</rdfs:comment>
+        <rdfs:label xml:lang="it">Abbreviazione Set</rdfs:label>
+        <rdfs:label xml:lang="en">Set Abbreviation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1472,6 +1506,16 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdfs:comment xml:lang="en">This class defines the Variations that might affect physical cards.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazioni Fisiche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#Price -->
+
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#Price">
+        <rdfs:comment xml:lang="en">Class defined for modeling prices.</rdfs:comment>
+        <rdfs:label xml:lang="it">Prezzo</rdfs:label>
+        <rdfs:label xml:lang="en">Price</rdfs:label>
     </owl:Class>
     
 

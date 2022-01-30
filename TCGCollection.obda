@@ -1,0 +1,53 @@
+[PrefixDeclaration]
+:		http://www.purl.org/cp_team/TCGCollection#
+dc:		http://purl.org/dc/elements/1.1/
+wd:		http://www.wikidata.org/entity/
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+foaf:		http://xmlns.com/foaf/0.1/
+frbr:		http://purl.org/vocab/frbr/core#
+obda:		https://w3id.org/obda/vocabulary#
+prov:		http://www.w3.org/ns/prov#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+vann:		http://purl.org/vocab/vann/
+
+[MappingDeclaration] @collection [[
+mappingId	Cards
+target		:Card_{id} a :Card ; :cardName {name} . 
+source		select id, name from mtg_cards
+
+mappingId	Rarities
+target		:Rarity_{id} a :Rarity ; rdfs:label {rarity} . 
+source		select id, rarity from mtg_rarities;
+
+mappingId	Artists
+target		:Artist_{id} a :Artist ; foaf:name {name}@en ; rdfs:label {name}@en ; owl:sameAs wd:{wikidata} . 
+source		select id, name, wikidata from artists;
+
+mappingId	Artworks
+target		:Artwork_{artwork} a :Artwork ; :createdBy :Artist_{artist} . 
+source		select artwork, artist from mtg_artwork_artists
+
+mappingId	Sets
+target		:Set_{abbr} a :Set ; rdfs:label {name} ; :setReleaseDate {release_date} ; :setName {name} ; :setAbbr {abbr} . 
+source		select * from mtg_sets;
+
+mappingId	SetsMarket
+target		:Set_{set_abbrv} a :Set ; :marketAvailability {availability} ; :priced :{price_class}Price ; :availability :{av_class}Availability ; :marketMinPrice :Set_Price_min_{set_abbrv} ; :marketTrendPrice :Set_Price_trend_{set_abbrv} . :Set_Price_min_{set_abbrv} a :Price ; :priceValue {min_price} ; :priceCurrency "€"^^xsd:string . :Set_Price_trend_{set_abbrv} a :Price ; :priceValue {trend_price} ; :priceCurrency "€"^^xsd:string . 
+source		select * from mtg_set_market_label
+
+mappingId	CardPrintsMarket
+target		:CardPrint_{print} a :CardPrint ; :marketAvailability {availability} ; :availability :{av_class}Availability ; :priced :{price_class}Price ; :marketMinPrice :PrintPrice_min_{print} ; :marketTrendPrice :PrintPrice_trend_{print} . :PrintPrice_min_{print} a :Price ; :priceValue {min_price} ; :priceCurrency "€"^^xsd:string . :PrintPrice_trend_{print} a :Price ; :priceValue {trend_price} ; :priceCurrency "€"^^xsd:string . 
+source		select * from mtg_prints_market_label
+
+mappingId	CardPrints
+target		:CardPrint_{id} a :CardPrint ; :printOf :Card_{card} ; :rarity :Rarity_{rarity_id} ; :printArtwork :Artwork_{artwork_id} ; :cardPrintVariation :CardPrintVariation_{variation} ; :cardPrintNumber {number} ; :isMemberOf :Set_{set} . 
+source		select * from mtg_prints_variations_view
+
+mappingId	Variations
+target		:CardPrintVariation_{id} a :CardPrintVariation ; rdfs:label {label} . 
+source		select * from mtg_print_variations;
+]]
+
