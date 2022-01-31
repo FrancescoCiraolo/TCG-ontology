@@ -839,9 +839,9 @@ Represents the concept of a an entity being a member of a collection, which in t
     
 
 
-    <!-- http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton -->
+    <!-- http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation -->
 
-    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton">
+    <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalVariation"/>
         <rdfs:comment xml:lang="en">This class groups the physical variations that lower the card condition.</rdfs:comment>
         <rdfs:label xml:lang="en">Bad Physical Variation</rdfs:label>
@@ -863,7 +863,7 @@ Represents the concept of a an entity being a member of a collection, which in t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardStatus"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+                <owl:onClass rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
@@ -965,60 +965,10 @@ Represents the concept of a an entity being a member of a collection, which in t
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#HASCard"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#MASet"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#MASet"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#HASet"/>
+                    </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1105,10 +1055,18 @@ Represents the concept of a an entity being a member of a collection, which in t
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
-                            </owl:Restriction>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
@@ -1205,30 +1163,41 @@ Represents the concept of a an entity being a member of a collection, which in t
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
-                            </owl:Restriction>
+                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASCard"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isExemplarOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#LASet"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isExemplarOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#MASet"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#MASet"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#LASCard"/>
+                                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#NASCard"/>
+                                </owl:unionOf>
+                            </owl:Class>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#isMemberOf"/>
-                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#NASet"/>
+                                <owl:someValuesFrom rdf:resource="http://www.purl.org/cp_team/TCGCollection#MASet"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#availability"/>
-                <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#MediumAvailability"/>
-            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
         <rdfs:comment xml:lang="en">A card is a member of this class if it&apos;s normal to find without major difficulties.</rdfs:comment>
@@ -1347,17 +1316,6 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#NACard -->
 
     <owl:Class rdf:about="http://www.purl.org/cp_team/TCGCollection#NACard">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#CardPrint"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.purl.org/cp_team/TCGCollection#availability"/>
-                        <owl:hasValue rdf:resource="http://www.purl.org/cp_team/TCGCollection#NoAvailability"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1717,7 +1675,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#BendPhysicalVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#BendPhysicalVariation">
-        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
         <rdfs:comment xml:lang="en">Variation for physical cards which are bended.</rdfs:comment>
         <rdfs:label xml:lang="en">Bend Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazione Fisica di Piegatura</rdfs:label>
@@ -1728,7 +1686,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#CloudingPhysicalVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#CloudingPhysicalVariation">
-        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
         <rdfs:comment xml:lang="en">Variation for physical cards which are clouded.</rdfs:comment>
         <rdfs:label xml:lang="en">Clouding Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazione Fisica di Polvere</rdfs:label>
@@ -1750,7 +1708,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#FadedPhysicalVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#FadedPhysicalVariation">
-        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
         <rdfs:comment xml:lang="en">Variation for physical cards which are faded.</rdfs:comment>
         <rdfs:label xml:lang="en">Faded Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazione Fisica di Dissolvenza</rdfs:label>
@@ -1916,7 +1874,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#ScratchPhysicalVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#ScratchPhysicalVariation">
-        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
         <rdfs:comment xml:lang="en">Variation for physical cards which are scratched.</rdfs:comment>
         <rdfs:label xml:lang="en">Scratch Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Varaiazione Fisica di Graffio</rdfs:label>
@@ -1927,7 +1885,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#TearPhysicalVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#TearPhysicalVariation">
-        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
         <rdfs:comment xml:lang="en">Variation for physical cards which have some wear and tear.</rdfs:comment>
         <rdfs:label xml:lang="en">Tear Physical Variation</rdfs:label>
         <rdfs:label xml:lang="it">Variazione Fisica di Strappo</rdfs:label>
@@ -1958,7 +1916,7 @@ Represents the concept of a an entity being a member of a collection, which in t
     <!-- http://www.purl.org/cp_team/TCGCollection#WaterDamagePhysicalVariation -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/cp_team/TCGCollection#WaterDamagePhysicalVariation">
-        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariaton"/>
+        <rdf:type rdf:resource="http://www.purl.org/cp_team/TCGCollection#BadPhysicalVariation"/>
         <rdfs:comment xml:lang="en">Variation for physical cards which are water damaged.</rdfs:comment>
         <rdfs:label xml:lang="it">Variazione Fisica di Danni d&apos;Acqua</rdfs:label>
         <rdfs:label xml:lang="en">Water Damage Physical Variation</rdfs:label>
