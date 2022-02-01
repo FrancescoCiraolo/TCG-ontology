@@ -184,6 +184,29 @@
     
 
 
+    <!-- http://www.purl.org/cp_team/TCGCollection#collectionMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#collectionMember">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#collectionMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#CardCollection"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <rdfs:comment xml:lang="en">Link between a CardCollection and the PhysicalCards contained in it. This property is an inverse property of collectionMemberOf.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection Member</rdfs:label>
+        <rdfs:label xml:lang="it">Membro Collezione</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#collectionMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#collectionMemberOf">
+        <rdfs:comment xml:lang="en">Link between a PhysicalCard and the CardCollection which contains it. This property is an inverse property of collectionMember.</rdfs:comment>
+        <rdfs:label xml:lang="it">Collection Member Of</rdfs:label>
+        <rdfs:label xml:lang="it">Membro Della Collezione</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.purl.org/cp_team/TCGCollection#condition -->
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#condition">
@@ -251,8 +274,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#exemplarOf">
         <rdfs:comment xml:lang="en">Link between PhysicalCard and the CardPrint. This property is an inverse property of exemplar.</rdfs:comment>
-        <rdfs:label xml:lang="it">Esemplare</rdfs:label>
-        <rdfs:label xml:lang="en">Exemplar</rdfs:label>
+        <rdfs:label xml:lang="it">Esemplare Di</rdfs:label>
+        <rdfs:label xml:lang="en">Exemplar Of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -442,6 +465,33 @@ Represents the concept of a an entity being a member of a collection, which in t
         <rdfs:comment xml:lang="en">Property linking a product to its trend price on the market.</rdfs:comment>
         <rdfs:label xml:lang="en">Market Trend Price</rdfs:label>
         <rdfs:label xml:lang="it">Prezzo Medio di Mercato</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardOwnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardOwnedBy">
+        <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#physicalCardOwner"/>
+        <rdfs:comment xml:lang="en">Direct link between a PhysicalCard and the Collectionist who owns it. This property is an inverse property of physicalCardOwner.</rdfs:comment>
+        <rdfs:label xml:lang="it">Carta Fisica Posseduta Da</rdfs:label>
+        <rdfs:label xml:lang="en">Physical Card Owned By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/cp_team/TCGCollection#physicalCardOwner -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#physicalCardOwner">
+        <rdfs:domain rdf:resource="http://www.purl.org/cp_team/TCGCollection#Collectionist"/>
+        <rdfs:range rdf:resource="http://www.purl.org/cp_team/TCGCollection#PhysicalCard"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#owner"/>
+            <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#collectionMember"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Direct link between a Collectionist and the PhysicalCards owned by them. This property is an inverse property of physicalCardOwnedBy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Card Owner</rdfs:label>
+        <rdfs:label xml:lang="it">Possessore di Carta Fisica</rdfs:label>
     </owl:ObjectProperty>
     
 
