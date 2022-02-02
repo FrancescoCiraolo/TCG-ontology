@@ -427,8 +427,8 @@ Represents the concept of a an entity being a member of a collection, which in t
     <owl:ObjectProperty rdf:about="http://www.purl.org/cp_team/TCGCollection#itemOwnedBy">
         <owl:inverseOf rdf:resource="http://www.purl.org/cp_team/TCGCollection#itemOwner"/>
         <rdfs:comment xml:lang="en">Direct link between an Item and the Collectionist who owns it. This property is an inverse property of physicalCardOwner.</rdfs:comment>
-        <rdfs:label xml:lang="it">Carta Fisica Posseduta Da</rdfs:label>
-        <rdfs:label xml:lang="en">Physical Card Owned By</rdfs:label>
+        <rdfs:label xml:lang="en">Item Owned By</rdfs:label>
+        <rdfs:label xml:lang="it">Oggetto Posseduta Da</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -444,8 +444,8 @@ Represents the concept of a an entity being a member of a collection, which in t
             <rdf:Description rdf:about="http://www.purl.org/cp_team/TCGCollection#collectionMember"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">Direct link between a Collectionist and the Items owned by them. This property is an inverse property of physicalCardOwnedBy.</rdfs:comment>
-        <rdfs:label xml:lang="en">Physical Card Owner</rdfs:label>
-        <rdfs:label xml:lang="it">Possessore di Carta Fisica</rdfs:label>
+        <rdfs:label xml:lang="en">Item Owner</rdfs:label>
+        <rdfs:label xml:lang="it">Possessore di Oggetto</rdfs:label>
     </owl:ObjectProperty>
     
 
